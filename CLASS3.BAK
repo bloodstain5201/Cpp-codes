@@ -1,0 +1,38 @@
+#include <iostream.h>
+#include <conio.h>
+
+    class test
+    {     clrscr();
+	 private:
+	 int testcode,nocandidate,centerreq;
+	 char description[80];
+	 void calcenter()
+	 {
+	    centerreq=(nocandidate/100)+1;
+	 }
+	 public:
+	 void schedule()
+	 {
+	     cout<<"\nEnter the testcode of student";
+	     cin>>testcode;
+	     cout<<"\nEnter the description of test";
+	     cin>>description;
+	     cout<<"\nEnter no of candidate";
+	     cin>>nocandidate;
+	     calcenter();
+	 }
+	 void disptest()
+	 {
+	   cout<<"\DESCRIPTION  "<<description;
+	   cout<<"\nTESTCODE  "<<testcode;
+	   cout<<"\nNo of centers required "<<centerreq;
+	 }
+    };
+    void main()
+    {
+	clrscr();
+	test t;
+	t.schedule();
+	t.disptest();
+	getch();
+    }

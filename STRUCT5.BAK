@@ -1,0 +1,31 @@
+#include<iostream.h>
+#include<conio.h>
+    struct edm
+    {
+      char country[20],capital[20];
+    };
+    void main()
+    {
+
+       edm a[20];
+       int n;
+       cout<<"\nEnter n";
+       cin>>n;
+       for(int i=0;i<n;i++)
+       {
+	 cout<<"\nEnter the name of country ";
+	 cin>>a[i].country;
+	 cout<<"\nEnter the name of capital ";
+	 cin>>a[i].capital;
+       }
+       char find[20];
+       cout<<"\nEnter the country name to find its capital";
+       cin>>find;
+       for(int j=0;j<n;j++)
+       {
+	  if(find==a[i].country)
+	  break;
+       }
+       cout<<"\nThe capital is "<<a[j].capital;
+       getch();
+    }

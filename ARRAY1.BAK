@@ -1,0 +1,54 @@
+#include<iostream.h>
+#include<conio.h>
+     void main()
+     {
+       clrscr();
+       int n,x,y,z,sum=0,a;
+       cout<<"\nSelect a number between 2 and 19:   ";
+       cin>>n;
+       randomize();
+       x=101+random(199-101+1);
+       a=x/100;
+       sum+=a;
+       x=x%100;
+       a=x/10;
+       sum+=a;
+       x=x%10;
+       a=x;
+       sum+=a;
+       if(sum==n)
+       cout<<"\nYou won!!!!!";
+       else
+      {sum=0,a=0;
+       randomize();
+       y=101+random(199-101+1);
+       a=y/100;
+       sum+=a;
+       y=y%100;
+       a=y/10;
+       sum+=a;
+       y=y%10;
+       a=y;
+       sum+=a;
+      }
+       if(sum==n)
+       cout<<"\nYou won!!!!!";
+       else
+      {sum=0,a=0;
+       randomize();
+       z=101+random(199-101+1);
+       a=z/100;
+       sum+=a;
+       z=z%100;
+       a=z/10;
+       sum+=a;
+       z=z%10;
+       a=z;
+       sum+=a;
+      }
+       if(sum==n)
+       cout<<"\nYou won!!!!!";
+       else
+       cout<<"\nYou lost";
+       getch();
+     }

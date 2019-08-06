@@ -1,0 +1,28 @@
+#include<iostream.h>
+#include<conio.h>
+   struct student
+   {
+     char name[20];
+     int marks,roll;
+   };
+   void main()
+   {
+
+      student s1,s2,s3;
+      int max1,max2;
+      cout<<"\nEnter the name roll no and marks of student";
+      cin>>s1.name>>s1.roll>>s1.marks;
+      cout<<"\nEnter the name roll no and marks of student";
+      cin>>s2.name>>s2.roll>>s2.marks;
+      cout<<"\nEnter the name roll no and marks of student";
+      cin>>s3.name>>s3.roll>>s3.marks;
+      max1=s2.marks>s3.marks?s2.marks:s3.marks;
+      max2=s1.marks>max1?s1.marks:s2.marks;
+      if(max2==s1.marks)
+      cout<<"\n Top scorer is"<<s1.name;
+      if(max2==s2.marks)
+      cout<<"\n Top scorer is"<<s2.name;
+      if(max2==s3.marks)
+      cout<<"\n Top scorer is"<<s3.name;
+      getch();
+   }

@@ -1,0 +1,44 @@
+#include <iostream.h>
+#include <conio.h>
+
+    class book
+    {    clrscr();
+	 private:
+	 int bookno;
+	 char booktitle[20];
+	 float price;
+	 float totalcost(int n)
+	 {
+	    int c;
+	    c=n*price;
+	    return c;
+	 }
+	 public:
+	 void input()
+	 {
+	     cout<<"\nEnter the bookno. ";
+	     cin>>bookno;
+	     cout<<"\nEnter the title of book";
+	     cin>>booktitle;
+	     cout<<"\nEnter price";
+	     cin>>price;
+	 }
+	 void purchase()
+	 {
+	   int cost,no;
+	   cout<<"\nEnter the no of books purchased";
+	   cin>>no;
+	   cost=totalcost(no);
+	   cout<<"\nBook Title  "<<booktitle;
+	   cout<<"\nBook no  "<<bookno;
+	   cout<<"\nCost "<<cost;
+	 }
+    };
+    void main()
+    {
+	clrscr();
+	book b;
+	b.input();
+	b.purchase();
+	getch();
+    }

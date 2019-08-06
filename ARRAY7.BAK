@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+  void main()
+  {
+
+    int m,n,a[10][10],b[10][10],sum=0,dsum=0;
+    cout<<"\nEnter m(rows) and n(columns)";
+    cin>>m>>n;
+    cout<<"\nEnter the values";
+    for(int i=0;i<n;i++)
+    { sum=0;
+      for(int j=0;j<m;j++)
+      {
+	cin>>a[i][j];
+	b[j][i]=a[i][j];
+	sum+=a[i][j];
+	if(i==j)
+	dsum+=a[i][j];
+	else continue;
+      }
+      cout<<"\nThe sum of column"<<i+1<<":"<<sum;
+    }
+    cout<<"\nThe sum of diagonals is :"<<dsum;
+    cout<<"\nThe transpose of matrix is  ";
+    cout<<"\n";
+    for(int x=0;x<n;x++)
+    { sum=0;
+      for(int y=0;y<m;y++)
+      {
+	cout<<a[x][y];
+	cout<<" ";
+      }
+      cout<<"\n";
+    }
+    getch();
+  }

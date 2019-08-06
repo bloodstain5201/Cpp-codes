@@ -1,0 +1,40 @@
+#include <iostream.h>
+#include <conio.h>
+
+    class batsman
+    {     clrscr();
+	 private:
+	 int bcode;
+	 char bname[20];
+	 int innings,notout,runs;
+	 float batavg;
+	 void calcavg()
+	 {
+	    batavg=runs/(innings-notout);
+	 }
+	 public:
+	 void readdata()
+	 {
+	     cout<<"\nEnter the bcode of batsman";
+	     cin>>bcode;
+	     cout<<"\nEnter the name of batsman";
+	     cin>>bname;
+	     cout<<"\nEnter marks innings notouts and runs";
+	     cin>>innings>>notout>>runs;
+	     calcavg();
+	 }
+	 void displaydata()
+	 {
+	   cout<<"\nName  "<<bname;
+	   cout<<"\nAdmission no  "<<bcode;
+	   cout<<"\nBATTING AVERAGE "<<batavg;
+	 }
+    };
+    void main()
+    {
+	clrscr();
+	batsman b;
+	b.readdata();
+	b.displaydata();
+	getch();
+    }

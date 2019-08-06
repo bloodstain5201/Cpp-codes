@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+#include<ctype.h>
+   void main()
+   {
+	clrscr();
+       int n;
+       char s[20];
+       cout<<"\nEnter a string";
+       cin.getline(s,20);
+       n=strlen(s);
+       for (int i=0;i<n;i++)
+       {
+	 if(isupper(s[i]))
+	 s[i]=tolower(s[i]);
+	 else if(islower(s[i]))
+	 s[i]=toupper(s[i]);
+       }
+       cout<<"\nNew modified string :"<<s;
+       getch();
+   }

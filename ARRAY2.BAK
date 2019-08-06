@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+    void main()
+    {
+       clrscr();
+       int n,x=0,y=1,z,a[20];
+       cout<<"\nEnter the no term of the series ";
+       cin>>n;
+       for(int i=0;i<n;i++)
+       {
+	   z=x+y;
+	   x=y;
+	   y=z;
+	   a[i]=z;
+       }
+       cout<<"\nThe"<<n<<"term is :"<<a[n-1];
+       cout<<"\nThe series is as follows";
+       cout<<"\n";
+       for(int j=0;j<n;j++)
+       {
+	cout<<" "<<a[j];
+       }
+       getch();
+    }

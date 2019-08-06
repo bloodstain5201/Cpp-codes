@@ -1,0 +1,39 @@
+#include <iostream.h>
+#include <conio.h>
+
+    class student
+    {
+	 private:
+	 int admno;
+	 char sname[20];
+	 float eng,math,sci,total;
+	 void ctotal()
+	 {
+	    total=eng+math+sci;
+	 }
+	 public:
+	 void takedata()
+	 {
+	     cout<<"\nEnter the admno. of student";
+	     cin>>admno;
+	     cout<<"\nEnter the name of student";
+	     cin>>sname;
+	     cout<<"\nEnter marks in eng maths and science";
+	     cin>>eng>>math>>sci;
+	     ctotal();
+	 }
+	 void showdata()
+	 {
+	   cout<<"\nName  "<<sname;
+	   cout<<"\nAdmission no  "<<admno;
+	   cout<<"\nTotal Marks "<<total;
+	 }
+    };
+    void main()
+    {
+
+	student s;
+	s.takedata();
+	s.showdata();
+	getch();
+    }

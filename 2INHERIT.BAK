@@ -1,0 +1,61 @@
+#include<iostream.h>
+#include<conio.h>
+   class edata
+   {
+       public:
+       int eno;
+       char edesig[10],ename[10];
+   };
+   class emoredata
+   {
+       public:
+       int doj[9],bpay;
+   };
+   class esalary:public edata,public emoredata
+   {
+       float da,cca,hra,total,bpay;
+       public:
+       void input()
+       {
+	 cout<<"\nEnter the following details of the Employee";
+	 cout<<"\nName";
+	 cin>>ename;
+	 cout<<"\nEmployee no";
+	 cin>>eno;
+	 cout<<"\nDesignation";
+	 cin>>edesig;
+	 cout<<"\nBasic pay";
+	 cin>>bpay;
+	 for(int i=0;i<=9;i++)
+	 {
+		cout<<"\nDate of joining";
+		cin>>doj[i];
+	 }
+       }
+       void calculation()
+       {
+	  da=(40*bpay)/100;
+	  cca=(5*bpay)/100;
+	  hra=(30*bpay)/100;
+	  total=bpay+da+hra+cca;
+       }
+       void show()
+       {
+	 cout<<"\nName"<<ename;
+	 cout<<"\nEmployee no"<<eno;
+	 cout<<"\nDesignation"<<edesig;
+	 cout<<"\nBasic pay"<<bpay;
+	 cout<<"\nDate of joining"<<doj;
+	 cout<<"\nTotal salary  "<<total;
+       }
+   };
+   void main()
+   {
+
+     esalary ob;
+     ob.input();
+     ob.calculation();
+     clrscr();
+     ob.show();
+     getch();
+   }

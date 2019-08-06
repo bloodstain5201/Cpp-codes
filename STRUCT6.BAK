@@ -1,0 +1,34 @@
+#include<iostream.h>
+#include<conio.h>
+    struct student
+    {
+      int clas,m[3];
+      char name[20],address[40];
+
+    };
+    void main()
+    {
+      clrscr();
+      int n;
+      student s[25];
+      cout<<"\nInput no of students";
+      cin>>n;
+      for(int i=0;i<n;i++)
+      {
+	 cout<<"\nEnter the following details for the student";
+	 cout<<"\nName";
+	 cin>>s[i].name;
+	 cout<<"\nClass";
+	 cin>>s[i].clas;
+	 cout<<"\nAddress";
+	 cin>>s[i].address;
+	 cout<<"\nEnter marks in first second and third subject";
+	 cin>>s[i].m[0]>>s[i].m[1]>>s[i].m[2];
+	 if(s[i].m[0]+s[i].m[1]+s[i].m[2]<175)
+	 cout<<"\nThe child has failed";
+	 clrscr();
+	 getch();
+      }
+      getch();
+
+    }

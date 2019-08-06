@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+    struct concap
+    {
+      int real,img;
+    };
+    void main()
+    {
+
+       concap l1,l2,l3;
+       cout<<"\nEnter the real and imaginary part ";
+       cin>>l1.real>>l1.img;
+       cout<<"\nEnter the real and imaginary part ";
+       cin>>l2.real>>l2.img;
+       l3.real=l1.real+l2.real;
+       l3.img=l1.img+l2.img;
+       cout<<"\n"<<l3.real<<"+"<<l3.img;
+       getch();
+    }

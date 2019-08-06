@@ -1,0 +1,44 @@
+#include <iostream.h>
+#include <conio.h>
+
+    class report
+    {    clrscr();
+	 private:
+	 int admno;
+	 char sname[20];
+	 float m[5],avg,total;
+	 void getavg()
+	 {
+	    avg=total/5;
+	 }
+	 public:
+	 void readinfo()
+	 {
+	     cout<<"\nEnter the admno. of student";
+	     cin>>admno;
+	     cout<<"\nEnter the name of student";
+	     cin>>sname;
+	     total=0;
+	     for(int i=0;i<5;i++)
+	     {
+		cout<<"\nEnter marks of student";
+		cin>>m[i];
+		total+=m[i];
+	     }
+	     getch();
+	 }
+	 void displayinfo()
+	 {
+	   cout<<"\nName  "<<sname;
+	   cout<<"\nAdmission no  "<<admno;
+	   cout<<"\nAverage "<<avg;
+	 }
+    };
+    void main()
+    {
+	clrscr();
+	report s;
+	s.readinfo();
+	s.displayinfo();
+	getch();
+    }
